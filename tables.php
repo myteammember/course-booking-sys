@@ -432,7 +432,7 @@ $result1 = mysqli_query($conn,$qry1);
                         <li class="mb-2">
                           <a class="dropdown-item border-radius-md text-center" href="javascript:;">
                           <i class="fa fa-pen text-xs"></i>
-                          delete
+                          Edit
                           </a>
                         </li>
                         
