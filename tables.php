@@ -432,7 +432,7 @@ $result2 = mysqli_query($conn, $qry2);
                           </a>
                         </li>
                         <li class="mb-2">
-                          <a class="dropdown-item border-radius-md text-center" href="javascript:;">
+                          <a class="dropdown-item border-radius-md text-center" href='tables.php'>
                           <i class="fa fa-pen text-xs"></i>
                           Edit
                           </a>
