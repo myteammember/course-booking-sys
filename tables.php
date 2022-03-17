@@ -12,6 +12,9 @@ $qry1 = "SELECT * From student";
 $result1 = mysqli_query($conn,$qry1);
 
 
+$qry2 = "SELECT * FROM course";
+$result2 = mysqli_query($conn, $qry2);
+
 
 
 
@@ -396,27 +399,26 @@ $result1 = mysqli_query($conn,$qry1);
                   </thead>
                   <tbody>
                     <tr>
-                    <?php while($row= mysqli_fetch_array($result)) { ?>
+                    <?php while($rowss = mysqli_fetch_array($result2)) { ?>
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
                             <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">John Michael</h6>
-                            <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                            <h6 class="mb-0 text-sm"><?=$rowss['co_name'] ?></h6>
+                            <p class="text-xs text-secondary mb-0"><?=$rowss['course_link'] ?></p>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">Manager</p>
-                        <p class="text-xs text-secondary mb-0">Organization</p>
+                        <p class="text-xs font-weight-bold mb-0"><?=$rowss['class_id'] ?></p>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Online</span>
+                        <span class="badge badge-sm bg-gradient-success"><?=$rowss['teacher_id'] ?></span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                        <span class="text-secondary text-xs font-weight-bold"><?=$rowss['class_status'] ?></span>
                       </td>
                       <td class="align-middle">
                       <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
