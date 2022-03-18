@@ -8,7 +8,7 @@ if(!isset($_SESSION['done'])){
 
 echo $_SESSION['admin_id'];
 
-$qry="SELECT*FROM course";
+$qry="SELECT*FROM class";
 $result = mysqli_query($conn,$qry);
 
 ?>
@@ -42,7 +42,7 @@ $result = mysqli_query($conn,$qry);
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="home.php">
         <img src="./assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">Web Developer</span>
+        <span class="ms-4 font-weight-bold font-16 text-white text-center">DIU...LOh</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
@@ -53,15 +53,7 @@ $result = mysqli_query($conn,$qry);
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
-            <span class="nav-link-text ms-1">Dashboard</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="tables.php">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
-            </div>
-            <span class="nav-link-text ms-1">Tables</span>
+            <span class="nav-link-text ms-1">Class</span>
           </a>
         </li>
         <li class="nav-item">
@@ -69,7 +61,7 @@ $result = mysqli_query($conn,$qry);
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">receipt_long</i>
             </div>
-            <span class="nav-link-text ms-1">Billing</span>
+            <span class="nav-link-text ms-1">Uncomming Class</span>
           </a>
         </li>
         <li class="nav-item">
@@ -77,7 +69,7 @@ $result = mysqli_query($conn,$qry);
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">notifications</i>
             </div>
-            <span class="nav-link-text ms-1">Notifications</span>
+            <span class="nav-link-text ms-1">Announment</span>
           </a>
         </li>
         <li class="nav-item mt-3">
@@ -118,9 +110,9 @@ $result = mysqli_query($conn,$qry);
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Class</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+          <h6 class="font-weight-bolder mb-0">Class</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -138,79 +130,6 @@ $result = mysqli_query($conn,$qry);
                 </div>
               </a>
             </li>
-            <li class="nav-item dropdown ps-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-bell cursor-pointer"></i>
-              </a>
-              <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="./assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New message</span> from Laur
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          13 minutes ago
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="./assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New album</span> by Travis Scott
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          1 day
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <title>credit-card</title>
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                              <g transform="translate(1716.000000, 291.000000)">
-                                <g transform="translate(453.000000, 454.000000)">
-                                  <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
-                                  <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          Payment successfully completed
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          2 days
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
           </ul>
         </div>
       </div>
@@ -223,8 +142,8 @@ $result = mysqli_query($conn,$qry);
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">COurse Name</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
-                      <th class="text-secondary opacity-7"></th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Expire</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Booking</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -233,39 +152,24 @@ $result = mysqli_query($conn,$qry);
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="<?=$row['c_image'] ?>" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                            <img src="assets/img/products/product-6-min.jpg" class=" me-3 border-radius-lg" alt="user1" width="120px" height="80px">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm"><?=$row['co_name'] ?></h6>
+                            <h6 class="mb-0 text-sm"><?=$row['c_tittle'] ?></h6>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0"><?=$row['c_price'] ?></p>
+                        <p class="text-xs font-weight-bold mb-0"><?=$row['c_description'] ?></p>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <button>Booking</button>
+                      <p class="text-xs font-weight-bold mb-0"><?=$row['c_price'] ?></p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
                       </td>
-                      <td class="align-middle">
-                      <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-ellipsis-v text-xs"></i>
-                      </a>
-                      <ul class="dropdown-menu  dropdown-menu-end  px-0 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton" style="width: 5rem;">
-                        <li class="mb-2 ">
-                          <a class="dropdown-item border-radius-md text-center" href="delete_teacher.php?id=<?=$row['teacher_id']?>" onclick="return confirm('Are you sure want to delete staff <?=$row["teacher_name"]?>?');">
-                          <i class="fa fa-trash text-xs"></i>
-                          </a>
-                        </li>
-                        <li class="mb-2">
-                          <a class="dropdown-item border-radius-md text-center" href='edit_teacher.php?id=<?=$row['teacher_id']?>'>
-                          <i class="fa fa-pen text-xs"></i>
-                          </a>
-                        </li>
-                        
-                      </ul>
+                      <td>
+                        <button class="btn btn-primary">Booking Now!!</button>
                       </td>
                     </tr>
                     <?php } ?>
