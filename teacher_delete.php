@@ -1,5 +1,6 @@
 <?php
 
+include_once('include/db.php');
 $query = "DELETE FROM teacher WHERE teacher_id='".$_GET['id']."'";
 
 if($result = mysqli_query($conn,$query)){

@@ -280,7 +280,7 @@ $result2 = mysqli_query($conn, $qry2);
                       </a>
                       <ul class="dropdown-menu  dropdown-menu-end  px-0 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton" style="width: 5rem;">
                         <li class="mb-2 ">
-                          <a class="dropdown-item border-radius-md text-center"  href="teacher_delete.php?id=<?=$row['student_id']?>" onclick="return confirm('Are you sure want to delete staff <?=$row["student_name"]?>?');"">
+                          <a class="dropdown-item border-radius-md text-center"  href="teacher_delete.php?id=<?=$row['teacher_id']?>" onclick="return confirm('Are you sure want to delete staff <?=$row["student_name"]?>?');"">
                           <i class="fa fa-trash text-xs"></i>  
                           DELETE
                           </a>
