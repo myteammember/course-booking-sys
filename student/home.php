@@ -212,6 +212,63 @@ echo $_SESSION['admin_id'];
       </div>
     </nav>
     <!-- End Navbar -->
+    <table>
+    <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">COurse Name</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                      <th class="text-secondary opacity-7"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <?php while($row= mysqli_fetch_array($result)) { ?>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="<?=$row['teacher_image'] ?>" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm"><?=$row['teacher_name'] ?></h6>
+                            <p class="text-xs text-secondary mb-0"><?=$row['teacher_email'] ?></p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0"><?=$row['teacher_gender'] ?></p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="badge badge-sm bg-gradient-success"><?=$row['t_status'] ?></span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                      </td>
+                      <td class="align-middle">
+                      <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-ellipsis-v text-xs"></i>
+                      </a>
+                      <ul class="dropdown-menu  dropdown-menu-end  px-0 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton" style="width: 5rem;">
+                        <li class="mb-2 ">
+                          <a class="dropdown-item border-radius-md text-center" href="delete_teacher.php?id=<?=$row['teacher_id']?>" onclick="return confirm('Are you sure want to delete staff <?=$row["teacher_name"]?>?');">
+                          <i class="fa fa-trash text-xs"></i>
+                          </a>
+                        </li>
+                        <li class="mb-2">
+                          <a class="dropdown-item border-radius-md text-center" href='edit_teacher.php?id=<?=$row['teacher_id']?>'>
+                          <i class="fa fa-pen text-xs"></i>
+                          </a>
+                        </li>
+                        
+                      </ul>
+                      </td>
+                    </tr>
+                    <?php } ?>
+                  </tbody>
+                </table>
+    </table>
   </main>
   <!--   Core JS Files   -->
   <script src="./assets/js/core/popper.min.js"></script>
