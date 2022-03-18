@@ -53,7 +53,7 @@ $result = mysqli_query($conn,$qry);
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
-            <span class="nav-link-text ms-1">Dashboard</span>
+            <span class="nav-link-text ms-1">COURSE</span>
           </a>
         </li>
         <li class="nav-item">
@@ -215,6 +215,7 @@ $result = mysqli_query($conn,$qry);
         </div>
       </div>
     </nav>
+<<<<<<< Updated upstream
     <!-- End Navbar -->
     <table>
     <table class="table align-items-center mb-0">
@@ -272,6 +273,27 @@ $result = mysqli_query($conn,$qry);
                   </tbody>
                 </table>
     </table>
+=======
+<div>
+  <div class="w3-quarter">
+      <img src="img/1.jpg" alt="Steak" style="width:20%">
+      <h3>Science class</h3>
+      <p>batman</p>
+</div>
+
+<div class="w3-quarter">
+      <img src="img/2.jpg" alt="Cherries" style="width:20%">
+      <h3>Food classes</h>
+      <p>vegetable</p>
+    </div>
+
+<div class="w3-quarter">
+      <img src="img/3.jpg" alt="Cherries" style="width:20%">
+      <h3>accounting</h3>
+      <p>math</p>
+    </div>
+
+>>>>>>> Stashed changes
   </main>
   <!--   Core JS Files   -->
   <script src="./assets/js/core/popper.min.js"></script>
