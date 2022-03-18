@@ -1,0 +1,14 @@
+<?php
+
+$query = "DELETE FROM teacher WHERE teacher_id='".$_GET['id']."'";
+
+if($result = mysqli_query($conn,$query)){
+  echo "<script>alert('Data have been delete');
+        window.location.href='tables.php';
+        </script>";
+    }else{
+        "<script>alert('Data Not Found');</script>";
+    }
+
+
+?>
