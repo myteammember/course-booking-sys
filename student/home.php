@@ -1,4 +1,5 @@
 <?php
+include_once("include/db.php");
 session_start();
 if(!isset($_SESSION['done'])){
   echo "<script>alert('PLease login');
@@ -6,6 +7,9 @@ if(!isset($_SESSION['done'])){
 }
 
 echo $_SESSION['admin_id'];
+
+$qry="SELECT*FROM course";
+$result = mysqli_query($conn,$qry);
 
 ?>
 <!DOCTYPE html>
@@ -229,19 +233,18 @@ echo $_SESSION['admin_id'];
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="<?=$row['teacher_image'] ?>" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                            <img src="<?=$row['c_image'] ?>" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm"><?=$row['teacher_name'] ?></h6>
-                            <p class="text-xs text-secondary mb-0"><?=$row['teacher_email'] ?></p>
+                            <h6 class="mb-0 text-sm"><?=$row['co_name'] ?></h6>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0"><?=$row['teacher_gender'] ?></p>
+                        <p class="text-xs font-weight-bold mb-0"><?=$row['c_price'] ?></p>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success"><?=$row['t_status'] ?></span>
+                        <button>Booking</button>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
