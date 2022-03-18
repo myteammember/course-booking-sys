@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
 	$sql = "INSERT INTO teacher (teacher_name, teacher_email, teacher_gender, t_status)
 VALUES ('$tname', '$temail', '$tgender', '$tstatus')";
 
-if($result=mysqli_query($conn,$sql)){
+if($result = mysqli_query($conn,$sql)){
 		echo "<script>alert('edit Successfully.')
 		window.location.href='tables.php';
 		</script>";
@@ -28,7 +28,7 @@ if($result=mysqli_query($conn,$sql)){
  </head>
  <body>
  <div class="container">
-		<form action="edit_teacher.php" method="post" style="margin-top: 20px;">
+		<form action="teacher_edit.php" method="post" style="margin-top: 20px;">
 			<table>
 				<tr>
 					<td><label>Name: </label></td>
