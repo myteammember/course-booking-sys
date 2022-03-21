@@ -169,7 +169,7 @@ $result = mysqli_query($conn,$qry);
                         <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
                       </td>
                       <td>
-                        <button class="btn btn-primary">Booking Now!!</button>
+                        <button class="btn btn-primary" type="submit">Booking NOW</button>
                       </td>
                     </tr>
                     <?php } ?>
