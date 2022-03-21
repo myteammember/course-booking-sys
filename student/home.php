@@ -6,7 +6,7 @@ if(!isset($_SESSION['done'])){
       window.location.href='home.php';</script>";
 }
 
-echo $_SESSION['admin_id'];
+echo $_SESSION['student_id'];
 
 $qry="SELECT*FROM class";
 $result = mysqli_query($conn,$qry);
@@ -53,7 +53,19 @@ $result = mysqli_query($conn,$qry);
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
+<<<<<<< Updated upstream
             <span class="nav-link-text ms-1">Class</span>
+=======
+            <span class="nav-link-text ms-1">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="tables.php">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">table_view</i>
+            </div>
+            <span class="nav-link-text ms-1">Tables</span>
+>>>>>>> Stashed changes
           </a>
         </li>
         <li class="nav-item">
@@ -163,7 +175,11 @@ $result = mysqli_query($conn,$qry);
                         <p class="text-xs font-weight-bold mb-0"><?=$row['c_description'] ?></p>
                       </td>
                       <td class="align-middle text-center text-sm">
+<<<<<<< Updated upstream
                       <p class="text-xs font-weight-bold mb-0"><?=$row['c_price'] ?></p>
+=======
+                        <span class="badge badge-sm bg-gradient-success"><?=$row['t_status'] ?></span>
+>>>>>>> Stashed changes
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
